@@ -7,8 +7,8 @@
 3. check with `erl --version`
 
 ## Shell Commands
-1. `help().`: the (.) is required 
-2. `q()`: quit
+1. `help().` 
+2. `q().`
 3. `ctrl+g`: abort
 
 * In the Erlang shell, expressions have to be terminated with a period followed by whitespace (line break, a space etc.), otherwise they won't be executed.
@@ -25,7 +25,7 @@
 ```erlang
 X = 1.
 X = X + 1. 
-** exception error: no match of right hand side value 2
+% exception error: no match of right hand side value 2
 ```
 * you can assign a value to a variable exactly once;
 * The `=` operator (not the variables) has the role of comparing values and raising an exception if they're different.
@@ -92,8 +92,8 @@ not (true and true).
 5 =:= 5.
 1 =:= 0.
 1 =/= 0.
-5 =:= 5.0. -> false
-5 == 5.0. -> true
+5 =:= 5.0. %-> false
+5 == 5.0.  %-> true
 5 /= 5.0.
 1 < 2.
 1 < 1.
