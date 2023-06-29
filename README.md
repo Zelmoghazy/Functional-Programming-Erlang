@@ -105,6 +105,34 @@ not (true and true).
 * `==`  : equals (dont care whether fp or integer)
 * `/=`  : not equal (dont care whether fp or integer)
 
+* You can compare anything with anything in erlang
+  * The correct ordering of each element in a comparison is the following
+    * number < atom < reference < fun < port < pid < tuple < list < bit string
+
+```erlang
+0 == false.
+% -> false
+1 < false.
+% -> true
+```
+* Erlang has no such things as boolean true and false. 
+  * The terms true and false are atoms
+
+### Tuples
+* a tuple is written in the form `{Element1, Element2, ..., ElementN}`. 
+```erlang
+Point = {4,5}.
+% -> {4,5}
+{X,Y} = Point.
+% -> {4,5}
+X.
+% -> 4
+{X,_} = Point.
+% -> {4,5}
+```
+* anonymous `_` variable is used to drop the value that would usually be placed there since we won't use it.
+  * The `_` variable is always seen as unbound and acts as a wildcard for pattern matching.
+
 
 ## Concepts
 
